@@ -1,0 +1,11 @@
+.h-list li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.h-list {
+  margin: 50px;
+}
+.d-none {
+  display: none;
+}
