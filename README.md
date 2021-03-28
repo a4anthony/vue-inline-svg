@@ -1,24 +1,92 @@
-# inline-svg
+# Inline Svg loader for Vue 3
 
-## Project setup
-```
-npm i vue-svgs-inline
-```
+## Installation
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+npm i vue-inline-svgs
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Usage
 
-### Lints and fixes files
-```
-npm run lint
-```
+```vue
+<template>
+  <div>
+    <!--size/4-->
+    <ul class="h-list">
+      <li v-for="(path,index) in paths" :key="index">
+        <inline-svg :size="size/4" :classes="classes" :path="path"/>
+      </li>
+    </ul>
+    <!--size/3-->
+    <ul class="h-list">
+      <li v-for="(path,index) in paths" :key="index">
+        <inline-svg :size="size/3" :classes="classes" :path="path"/>
+      </li>
+    </ul>
+    <!--size/2-->
+    <ul class="h-list">
+      <li v-for="(path,index) in paths" :key="index">
+        <inline-svg :size="size/2" :classes="classes" :path="path"/>
+      </li>
+    </ul>
+    <!--size-->
+    <ul class="h-list">
+      <li v-for="(path,index) in paths" :key="index">
+        <inline-svg :size="size" :classes="classes" :path="path"/>
+      </li>
+    </ul>
+  </div>
+</template>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+<script>
+import InlineSvg from "vue-inline-svgs"
+
+export default {
+  components: {
+    InlineSvg
+  },
+  data() {
+    size: 60,
+    classes: "", 
+    paths: [
+      require(`!html-loader!./assets/colors.svg`),
+      require(`!html-loader!./assets/code-brackets.svg`),
+      require(`!html-loader!./assets/comments.svg`),
+      require(`!html-loader!./assets/direction.svg`),
+      require(`!html-loader!./assets/flow.svg`),
+      require(`!html-loader!./assets/plugin.svg`),
+      require(`!html-loader!./assets/repo.svg`),
+      require(`!html-loader!./assets/stackalt.svg`)
+    ]
+  }
+}
+</script>
+
+<style>
+.h-list li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.h-list {
+  margin: 50px;
+}
+</style>
+```
+<br>
+<p align="center">
+  <img src="https://github.com/a4anthony/vue-inline-svgs/blob/main/preview.png?raw=true"/>
+</p>
+
+### Note
+
+For Nuxt applications, use the approach below to avoid runtime errors
+
+```vue
+<client-only>
+  <inline-svg/>
+</client-only>
+```
+# Enjoy!

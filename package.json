@@ -1,11 +1,13 @@
 {
   "name": "vue-inline-svgs",
   "version": "1.0.1",
+  "license": "MIT",
   "main": "dist/vue-inline-svgs.umd.js",
   "module": "dist/vue-inline-svgs.esm.js",
   "unpkg": "dist/vue-inline-svgs.min.js",
   "repository": "https://github.com/a4anthony/vue-inline-svgs",
   "homepage": "https://github.com/a4anthony/vue-inline-svgs",
+  "author": "Atnhony Akro @a4anthony",
   "browser": {
     "./sfc": "src/components/InlineSvg.vue"
   },
@@ -18,7 +20,7 @@
   "files": [
     "dist/*",
     "static/*",
-    "src/assets/css/*"
+    "src/stories/assets/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
