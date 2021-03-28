@@ -1,6 +1,6 @@
 {
   "name": "vue-inline-svgs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/vue-inline-svgs.umd.js",
   "module": "dist/vue-inline-svgs.esm.js",
   "unpkg": "dist/vue-inline-svgs.min.js",
