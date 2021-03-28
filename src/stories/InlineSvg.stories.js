@@ -28,18 +28,26 @@ const Template = args => ({
   // And then the `args` are bound to your component with `v-bind="args"`
   template:
     "<ul class='h-list' ><" +
+    "li  v-for='(path,index) in paths' :key='index'><inline-svg :size='size/4' :classes='classes'  :path='path'/></li>" +
+    "</ul>" +
+    "<ul class='h-list' ><" +
+    "li  v-for='(path,index) in paths' :key='index'><inline-svg :size='size/3' :classes='classes'  :path='path'/></li>" +
+    "</ul>" +
+    "<ul class='h-list' ><" +
+    "li  v-for='(path,index) in paths' :key='index'><inline-svg :size='size/2' :classes='classes'  :path='path'/></li>" +
+    "</ul>" +
+    "<ul class='h-list' ><" +
     "li  v-for='(path,index) in paths' :key='index'><inline-svg :size='size' :classes='classes'  :path='path'/></li>" +
     "</ul>"
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  size: 40,
+  size: 60,
   classes: "",
-  // path: require(`!html-loader!./assets/code-brackets.svg`),
   paths: [
-    require(`!html-loader!./assets/code-brackets.svg`),
     require(`!html-loader!./assets/colors.svg`),
+    require(`!html-loader!./assets/code-brackets.svg`),
     require(`!html-loader!./assets/comments.svg`),
     require(`!html-loader!./assets/direction.svg`),
     require(`!html-loader!./assets/flow.svg`),

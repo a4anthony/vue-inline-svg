@@ -1,12 +1,11 @@
 {
-  "name": "inline-svg",
+  "name": "vue-inline-svgs",
   "version": "1.0.0",
-  "private": true,
-  "main": "dist/inline-svg.umd.js",
-  "module": "dist/inline-svg.esm.js",
-  "unpkg": "dist/inline-svg.min.js",
-  "repository": "https://github.com/a4anthony/vue-inline-svg",
-  "homepage": "https://github.com/a4anthony/vue-inline-svg",
+  "main": "dist/vue-inline-svgs.umd.js",
+  "module": "dist/vue-inline-svgs.esm.js",
+  "unpkg": "dist/vue-inline-svgs.min.js",
+  "repository": "https://github.com/a4anthony/vue-inline-svgs",
+  "homepage": "https://github.com/a4anthony/vue-inline-svgs",
   "browser": {
     "./sfc": "src/components/InlineSvg.vue"
   },
@@ -23,10 +22,10 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config rollup.config.js --format umd --file dist/inline-svg.umd.js",
-    "build:es": "rollup --config rollup.config.js --format es --file dist/inline-svg.esm.js",
-    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/inline-svg.min.js",
+    "build": "rm -rf dist && npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config rollup.config.js --format umd --file dist/vue-inline-svgs.umd.js",
+    "build:es": "rollup --config rollup.config.js --format es --file dist/vue-inline-svgs.esm.js",
+    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/vue-inline-svgs.min.js",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

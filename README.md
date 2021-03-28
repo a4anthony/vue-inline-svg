@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-npm install
+npm i vue-svgs-inline
 ```
 
 ### Compiles and hot-reloads for development
