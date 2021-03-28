@@ -50,14 +50,14 @@ export default {
     size: 60,
     classes: "", 
     paths: [
-      require(`!html-loader!./assets/colors.svg`),
-      require(`!html-loader!./assets/code-brackets.svg`),
-      require(`!html-loader!./assets/comments.svg`),
-      require(`!html-loader!./assets/direction.svg`),
-      require(`!html-loader!./assets/flow.svg`),
-      require(`!html-loader!./assets/plugin.svg`),
-      require(`!html-loader!./assets/repo.svg`),
-      require(`!html-loader!./assets/stackalt.svg`)
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/colors.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/code-brackets.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/comments.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/direction.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/flow.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/plugin.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/repo.svg`),
+      require(`!html-loader!vue-inline-svgs/src/stories/assets/stackalt.svg`)
     ]
   }
 }
