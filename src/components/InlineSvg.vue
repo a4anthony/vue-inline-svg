@@ -50,11 +50,11 @@ export default {
     },
     width: {
       type: Number,
-      default: this.size,
+      default: null,
     },
     height: {
       type: Number,
-      default: this.size,
+      default: null,
     },
   },
   render() {
@@ -62,8 +62,8 @@ export default {
       classList: 'flex-items-center',
       innerHTML: `<span>${new Svg(this.path)
         .classes(this.classes)
-        .width(this.width)
-        .height(this.height)}</span>`,
+        .width(this.width ? this.width : this.size)
+        .height(this.height ? this.height : this.size)}</span>`,
     })
   },
 }

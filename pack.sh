@@ -8,8 +8,8 @@ npm run build
 
 npm pack
 
-cp inline-svg-0.1.0.tgz ~/vue/test/
+cp vue-inline-svgs-1.0.4.tgz ~/vue/test/
 
 cd ~/vue/test/
 
-npm i inline-svg-0.1.0.tgz
+npm i vue-inline-svgs-1.0.4.tgz
