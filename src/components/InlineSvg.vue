@@ -24,6 +24,13 @@ class Svg {
     return this
   }
 
+  fill(fill) {
+    if (fill) {
+      this.svg.setAttribute('fill', fill)
+    }
+    return this
+  }
+
   height(height) {
     if (height) {
       this.svg.setAttribute('height', height)
