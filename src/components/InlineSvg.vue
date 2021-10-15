@@ -44,6 +44,10 @@ export default {
       type: String,
       default: '',
     },
+    fill: {
+      type: String,
+      default: '',
+    },
     size: {
       type: Number,
       default: 15,
@@ -63,6 +67,7 @@ export default {
       innerHTML: `<span>${new Svg(this.path)
         .classes(this.classes)
         .width(this.width ? this.width : this.size)
+        .fill(this.fill)
         .height(this.height ? this.height : this.size)}</span>`,
     })
   },
